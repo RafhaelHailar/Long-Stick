@@ -1,0 +1,101 @@
+{
+    "Stick_A04" : {
+        "name" : "Stick A04",
+        "image" : "./images/stick-item-1.jpg",
+        "subname" : "Drum Stick",
+        "type" : "Real Stick",
+        "previous_price" : "$100",
+        "current_price" : "$30",
+        "total" : 1
+    },
+    "Stick_A01" : {
+        "name" : "Stick A01",
+        "image" : "./images/stick-item-1.jpg",
+        "subname" : "Stick E",
+        "type" : "Real Stick",
+        "current_price" : "$40",
+        "previous_price" : "",
+        "total" : 1
+    },
+    "Stick_A06" : {
+        "name" : "Stick A06",
+        "image" : "./images/stick-item-3.jpg",
+        "subname" : "Stick Er",
+        "type" : "Real Stick",
+        "current_price" : "$24",
+        "previous_price" : "$590",
+        "total" : 1
+    },
+    "Stick_A007" : {
+        "name" : "Stick A007",
+        "image" : "./images/stick-item-3.jpg",
+        "subname" : "STICKret Agent",
+        "type" : "Real Stick",
+        "current_price" : "$300",
+        "previous_price" : "",
+        "total" : 1
+    },
+    "Stick_A09" : {
+        "name" : "Stick A09",
+        "image" : "./images/stick-item-1.jpg",
+        "subname" : "He is Stick",
+        "type" : "Real Stick",
+        "current_price" : "Free",
+        "previous_price" : "$9999",
+        "total" : 1
+    },
+    "Stick_C01" : {
+        "name" : "Stick C01",
+        "image" : "./images/stick-item-4.jpg",
+        "subname" : "Sticky Friendly",
+        "type" : "Stress Reliever Stick",
+        "current_price" : "$43",
+        "previous_price" : "$432",
+        "total" : 1
+    },
+    "Stick_C01?" : {
+        "name" : "Stick C01?",
+        "image" : "./images/stick-item-4.jpg",
+        "subname" : "Human Bone Not A Stick",
+        "type" : "⛥ Ẃ̵̛̤͑h̶̞̺͔̎͜ȁ̴͉̈́͊̍͝t̷̢̰͔͕̀͂̏̓ ̷̦̥̤̂̓t̴̛̙͚͇͚̣̅͝h̶̞̉̕e̵̻̣͌ͅ ̴͕̱̒͗͝h̵̢̖͎̭̆̊e̵͇͔̳͊́̾̕ͅc̵̨͇̲̅͆k̵̡̨̺̘̫͌̔ ̴͚̗̭̩͂̀͜ī̴̫̾͆̀ş̴̼͍̫̖̋̈͋́͠ ̵͓̓̈́̈́̍͆ṭ̶̤̣́̏͑͒͠h̴̫͉͇̑̒̏̑i̸̧͎̩̝̒́̅̚͠s̶̬̟͙̦̀͋?̷̣̤̟͔̃̅̒̎ͅ ☠",
+        "current_price" : "$21",
+        "previous_price" : "$21.1",
+        "total" : 1
+    },
+    "Stick_E01" : {
+        "name" : "Stick E01",
+        "image" : "./images/stick-item-6.jpg",
+        "subname" : "Sticky Mouth",
+        "type" : "Food Stick",
+        "current_price" : "$44",
+        "previous_price" : "$94",
+        "total" : 1
+    },
+    "Sticky_Foodle" : {
+        "name" : "Sticky Foodle",
+        "image" : "./images/stick-item-6.jpg",
+        "subname" : "Stick Food",
+        "type" : "Food Stick",
+        "current_price" : "$10",
+        "previous_price" : "$999",
+        "total" : 1
+    },
+    "Stick_D12" : {
+        "name" : "Stick D12",
+        "image" : "./images/stick-item-5.jpg",
+        "subname" : "Stick Beater",
+        "type" : "Stick Force",
+        "current_price" : "$32",
+        "previous_price" : "",
+        "total" : 1
+    },
+    "Stick_Brutality" : {
+        "name" : "Stick Brutality",
+        "image" : "./images/stick-item-5.jpg",
+        "subname" : "Stick Cop",
+        "type" : "Stick Force",
+        "current_price" : "$30",
+        "previous_price" : "$100",
+        "total" : 1
+    }
+}
