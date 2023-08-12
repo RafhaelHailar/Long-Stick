@@ -80,7 +80,7 @@ const CART = new function() {
         let item = this.cart_data[index];
 
         item.total += number;
-        this.total_price += parseInt(item.current_price.current_price == "Free" ? 0 : item.current_price.slice(1)) * (number < 0 ? -1 : 1);
+        this.total_price += parseInt(item.current_price == "Free" ? 0 : item.current_price.slice(1)) * (number < 0 ? -1 : 1);
 
         if (item.total == 0) this.removeItem(item_name,true);
         else this.displayItems();
@@ -101,7 +101,7 @@ const CART = new function() {
 
         this.cart_data.splice(index,1);
         if (!reduced)
-            this.total_price -= item.total *  parseInt(item.current_price.current_price == "Free" ? 0 : item.current_price.slice(1));
+            this.total_price -= item.total *  parseInt(item.current_price == "Free" ? 0 : item.current_price.slice(1));
         
         item.total = 1;
         this.displayItems();

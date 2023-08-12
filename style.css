@@ -200,13 +200,17 @@ body {
     padding: 3.5rem;
 }
 
+#footer hr {
+    border-top: 0.1rem solid black;
+}
+
 #footer .subscription {
     padding: 1rem 3rem;
     display: inline-block;
     width: 100%;
 }
 
-#footer .left {
+#footer .subscription .left {
    float: left;
 }
 
@@ -214,7 +218,7 @@ body {
     width: 24rem;
 }
 
-#footer .right {
+#footer .subscription .right {
     float: right;
     width: 50%;
 }
@@ -247,6 +251,61 @@ body {
     color: black;
     text-decoration: none;
     margin: .5rem;
+}
+
+#footer .certificates {
+    padding: 1rem 3rem;
+}
+
+#footer .certificates .left h5{
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#footer .certificates ul{
+    list-style: none;
+    padding: 0;
+}
+
+#footer .certificates ul li {
+    margin-bottom: .4rem;
+}
+
+#footer .certificates ul a , 
+#footer .copyright .right ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer .certificates ul a {
+    font-size: .8rem;
+}
+
+#footer .certificates ul a:hover , #footer .copyright .right ul a:hover {
+    text-decoration: underline;
+}
+
+#footer .copyright {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .copyright .left{
+    font-size: .9rem;
+}
+
+#footer .copyright .right ul{
+    display: flex;
+    list-style: none;
+}
+
+#footer .copyright .right ul li {
+    margin-left: 1.6rem;
+}
+
+#footer .copyright .right ul a {
+    font-size: .9rem;
 }
 
 #cart {
