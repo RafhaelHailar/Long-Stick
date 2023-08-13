@@ -80,7 +80,7 @@ const CART = new function() {
         let item = this.cart_data[index];
 
         item.total += number;
-        this.total_price += parseInt(item.current_price == "Free" ? 0 : item.current_price.slice(1)) * (number < 0 ? -1 : 1);
+        this.total_price += item.current_price * (number < 0 ? -1 : 1);
 
         if (item.total == 0) this.removeItem(item_name,true);
         else this.displayItems();
@@ -101,7 +101,7 @@ const CART = new function() {
 
         this.cart_data.splice(index,1);
         if (!reduced)
-            this.total_price -= item.total *  parseInt(item.current_price == "Free" ? 0 : item.current_price.slice(1));
+            this.total_price -= item.total * item.current_price;
         
         item.total = 1;
         this.displayItems();
@@ -125,7 +125,7 @@ const CART = new function() {
         console.log(index) 
         if (index == -1) {
             this.cart_data.push(this.items[item]);
-            this.total_price += parseInt((this.items[item].current_price == "Free" ? 0 : this.items[item].current_price.slice(1)));
+            this.total_price += this.items[item].current_price;
         }  
         else this.updateItemTotal(item,1);
         this.displayItems();
@@ -164,8 +164,8 @@ const CART = new function() {
                             <button><i class="fa-solid fa-minus" onclick="CART.updateItemTotal('${name.replace(" ","_")}',-1)"></i></button>
                         </div>
                         <div class="price">
-                            <p class="current">${current_price}</p>
-                            <p class="previous">${previous_price}</p>
+                            <p class="current">${current_price > 0 ? "$" + current_price : "Free"}</p>
+                            <p class="previous">${previous_price ? "$" + previous_price : ""}</p>
                         </div>
                     </div>
                 </div>

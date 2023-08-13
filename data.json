@@ -49,8 +49,8 @@
         "image" : "./images/stick-item-4.jpg",
         "subname" : "Sticky Friendly",
         "type" : "Stress Reliever Stick",
-        "current_price" : "$43",
-        "previous_price" : "$432",
+        "current_price" : 43,
+        "previous_price" : 432,
         "total" : 1
     },
     "Stick_C01?" : {
@@ -58,8 +58,8 @@
         "image" : "./images/stick-item-4.jpg",
         "subname" : "Human Bone Not A Stick",
         "type" : "⛥ Ẃ̵̛̤͑h̶̞̺͔̎͜ȁ̴͉̈́͊̍͝t̷̢̰͔͕̀͂̏̓ ̷̦̥̤̂̓t̴̛̙͚͇͚̣̅͝h̶̞̉̕e̵̻̣͌ͅ ̴͕̱̒͗͝h̵̢̖͎̭̆̊e̵͇͔̳͊́̾̕ͅc̵̨͇̲̅͆k̵̡̨̺̘̫͌̔ ̴͚̗̭̩͂̀͜ī̴̫̾͆̀ş̴̼͍̫̖̋̈͋́͠ ̵͓̓̈́̈́̍͆ṭ̶̤̣́̏͑͒͠h̴̫͉͇̑̒̏̑i̸̧͎̩̝̒́̅̚͠s̶̬̟͙̦̀͋?̷̣̤̟͔̃̅̒̎ͅ ☠",
-        "current_price" : "$21",
-        "previous_price" : "$21.1",
+        "current_price" : 21,
+        "previous_price" : 21.1,
         "total" : 1
     },
     "Stick_E01" : {
@@ -67,8 +67,8 @@
         "image" : "./images/stick-item-6.jpg",
         "subname" : "Sticky Mouth",
         "type" : "Food Stick",
-        "current_price" : "$44",
-        "previous_price" : "$94",
+        "current_price" : 44,
+        "previous_price" : 94,
         "total" : 1
     },
     "Sticky_Foodle" : {
@@ -76,8 +76,8 @@
         "image" : "./images/stick-item-6.jpg",
         "subname" : "Stick Food",
         "type" : "Food Stick",
-        "current_price" : "$10",
-        "previous_price" : "$999",
+        "current_price" : 10,
+        "previous_price" : 999,
         "total" : 1
     },
     "Stick_D12" : {
@@ -85,8 +85,8 @@
         "image" : "./images/stick-item-5.jpg",
         "subname" : "Stick Beater",
         "type" : "Stick Force",
-        "current_price" : "$32",
-        "previous_price" : "",
+        "current_price" : 32,
+        "previous_price" : null,
         "total" : 1
     },
     "Stick_Brutality" : {
