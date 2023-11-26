@@ -1,7 +1,8 @@
+const nav = document.getElementById("nav");
 window.addEventListener("scroll",function() {
     if (scrollY > 20)    {
-        this.document.getElementById("nav").classList.add("white");
-    } else this.document.getElementById("nav").classList.remove("white");
+        nav.classList.add("white");
+    } else nav.classList.remove("white");
 }); 
 
 let cards = document.querySelectorAll("#products .card .image-container");
@@ -115,9 +116,11 @@ const CART = new function() {
     }
 
     this.hideHiddenCart = function hideHiddenCart() {
+        nav.style.boxShadow = "none";
         this.element.style.transform = "translateX(100%)";
         document.body.style.overflow = "auto";
         document.getElementById("main").classList.remove("cover");
+        setTimeout(() => nav.style.boxShadow = "0 0 10px gray",100);
     }
 
     this.addItem = function(item) {
@@ -132,8 +135,11 @@ const CART = new function() {
     }
 
     this.displayItems = function(){
+        let cart_greeting = document.querySelector("#cart .cart-greeting");
+        if (this.cart_data.length === 0) cart_greeting.classList.add("hide");
+        else cart_greeting.classList.remove("hide");
 
-        this.checkout_button.innerHTML = `$${this.total_price} - Checkout`;
+        document.querySelector("#cart .checkout").innerHTML = this.cart_data.length === 0 ? `<a href="#">Go Shop</a>` : `<button>${this.total_price} - Checkout</button>`;
         localStorage.setItem("cart-items",JSON.stringify(this.cart_data));
         localStorage.setItem("previous-total",String(this.total_price));
 
