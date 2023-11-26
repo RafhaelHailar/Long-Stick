@@ -19,7 +19,7 @@ body {
 
 #header {
     height: 110vh;
-    background:/* linear-gradient(to right,rgba(255,255,255,.01),transparent,rgba(255,255,255,0.01)), */ url("images/head-items2-bg.jpg");
+    background:/* linear-gradient(to right,rgba(255,255,255,.01),transparent,rgba(255,255,255,0.01)), */ url("images/head-items2(1)-bg.webp");
     background-position: center;
     background-size: cover;
     color: black;
