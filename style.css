@@ -536,6 +536,10 @@ body {
     align-items: center;
 }
 
+#item-collections .actions {
+
+}
+
 #item-collections .contents .card .card-img-top .actions button {
     width: 90%;
     padding: .7rem 0;

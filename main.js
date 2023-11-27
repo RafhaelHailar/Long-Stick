@@ -187,8 +187,11 @@ const CART = new function() {
            `;
         }
         
-        if (this.cart_data.length > 0)
-            nav.querySelector("a.cart-nav").setAttribute("data-cart-items-total",this.cart_data.length);
+        let navCart = nav.querySelectorAll(".nav-icons a")[1];
+        if (this.cart_data.length > 0) {
+            navCart.classList.add("cart-nav");
+            navCart.setAttribute("data-cart-items-total",this.cart_data.length);
+        } else navCart.classList.remove("cart-nav");
         this.items_container.innerHTML = items;
     }
 }
@@ -205,10 +208,11 @@ window.onload = function() {
         CART.cart_data = JSON.parse(cart_data);
         CART.total_price = Number(previous_total);
          
-        let cartNav = nav.querySelectorAll(".nav-icons a")[1];
-            cartNav.classList.add("cart-nav");  
-            cartNav.setAttribute("data-cart-items-total",CART.cart_data.length);
-
+        if (CART.cart_data.length > 0) {
+            let cartNav = nav.querySelectorAll(".nav-icons a")[1];
+                cartNav.classList.add("cart-nav");  
+                cartNav.setAttribute("data-cart-items-total",CART.cart_data.length);
+        }
         CART.displayItems();
     }
 }
