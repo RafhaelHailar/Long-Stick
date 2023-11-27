@@ -186,8 +186,9 @@ const CART = new function() {
             </div>
            `;
         }
-
-        nav.querySelector("a.cart-nav").setAttribute("data-cart-items-total",this.cart_data.length);
+        
+        if (this.cart_data.length > 0)
+            nav.querySelector("a.cart-nav").setAttribute("data-cart-items-total",this.cart_data.length);
         this.items_container.innerHTML = items;
     }
 }
