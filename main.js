@@ -1,4 +1,8 @@
 const nav = document.getElementById("nav");
+
+const paths = location.pathname.split("/");
+const pathname = paths[paths.length - 1];
+
 window.addEventListener("scroll",function() {
     if (scrollY > 20)    {
         nav.classList.add("white");
@@ -116,11 +120,13 @@ const CART = new function() {
     }
 
     this.hideHiddenCart = function hideHiddenCart() {
-        nav.style.boxShadow = "none";
+        nav.classList.remove("white");
         this.element.style.transform = "translateX(100%)";
         document.body.style.overflow = "auto";
         document.getElementById("main").classList.remove("cover");
-        setTimeout(() => nav.style.boxShadow = "0 0 10px gray",100);
+        setTimeout(() => {
+              if (scrollY > 20) nav.classList.add("white");
+        },100);
     }
 
     this.addItem = function(item) {
@@ -136,10 +142,12 @@ const CART = new function() {
 
     this.displayItems = function(){
         let cart_greeting = document.querySelector("#cart .cart-greeting");
-        if (this.cart_data.length === 0) cart_greeting.classList.add("hide");
-        else cart_greeting.classList.remove("hide");
+        if (this.cart_data.length === 0) cart_greeting.classList.remove("hide");
+        else cart_greeting.classList.add("hide");
 
-        document.querySelector("#cart .checkout").innerHTML = this.cart_data.length === 0 ? `<a href="#">Go Shop</a>` : `<button>${this.total_price} - Checkout</button>`;
+        document.querySelector("#cart .checkout").innerHTML = this.cart_data.length === 0 ? `<a href="${pathname !== "shop.html" ? "./subpages/shop.html" : ""}">Go Shop</a>` 
+                : `<button>$${this.total_price} - Checkout</button>`;
+        
         localStorage.setItem("cart-items",JSON.stringify(this.cart_data));
         localStorage.setItem("previous-total",String(this.total_price));
 
@@ -165,9 +173,9 @@ const CART = new function() {
                     </button>
                     <div class="actions">
                         <div class="amount">
-                            <button><i class="fa-solid fa-plus" onclick="CART.updateItemTotal('${name.replace(" ","_")}',1)"></i></button>
+                            <button onclick="CART.updateItemTotal('${name.replace(" ","_")}',1)"><i class="fa-solid fa-plus" ></i></button>
                             <div class="number">${total}</div>
-                            <button><i class="fa-solid fa-minus" onclick="CART.updateItemTotal('${name.replace(" ","_")}',-1)"></i></button>
+                            <button onclick="CART.updateItemTotal('${name.replace(" ","_")}',-1)"><i class="fa-solid fa-minus" ></i></button>
                         </div>
                         <div class="price">
                             <p class="current">${current_price > 0 ? "$" + current_price : "Free"}</p>
@@ -178,6 +186,8 @@ const CART = new function() {
             </div>
            `;
         }
+
+        nav.querySelector("a.cart-nav").setAttribute("data-cart-items-total",this.cart_data.length);
         this.items_container.innerHTML = items;
     }
 }
@@ -193,6 +203,11 @@ window.onload = function() {
     if (cart_data) {
         CART.cart_data = JSON.parse(cart_data);
         CART.total_price = Number(previous_total);
+         
+        let cartNav = nav.querySelectorAll(".nav-icons a")[1];
+            cartNav.classList.add("cart-nav");  
+            cartNav.setAttribute("data-cart-items-total",CART.cart_data.length);
+
         CART.displayItems();
     }
 }

@@ -19,22 +19,34 @@
             
         <!-- Header -->
         <div id="header" class="container-fluid">
-            <div id="nav" class="container-fluid d-flex justify-content-between">
-                <div class="nav-items">
-                    <a href="./subpages/shop.html">Shop</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact Us</a>
-                </div>
-                <div class="nav-logo">   
-                    <h1>Long Stick</h1>
-                </div>
-                <div class="nav-icons">
-                    <a href="#">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                    <a class="btn" onclick="CART.showHiddenCart()">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
+            <div id="nav" class="container-fluid ">
+                
+                <div class="position-relative d-flex justify-content-between py-3 ">
+                    <div class="px-md-5 nav-items d-xl-flex d-none align-items-center">
+                        <a href="./subpages/shop.html">Shop</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                    
+                    <div class="nav-burger d-xl-none d-flex">
+                       <button> 
+                           <i class="fa-solid fa-bars"></i>
+                       </button>
+                    </div>
+
+                    <div style="height: 100%"  class=" nav-logo-container">
+                        <div class="nav-logo">   
+                            <h1 class=" m-0">Long Stick</h1>
+                        </div>
+                    </div>
+                    <div class="nav-icons px-lg-5">
+                        <a href="#" class="block mx-2 mx-lg-5">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <a class="btn" onclick="CART.showHiddenCart()">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="content">
@@ -47,7 +59,7 @@
             </div>
         </div>
         
-        <!-- Products -->
+        <!-- Products --> 
         <div id="products" class="container-fluid mt-5">
             <div class="container">
                 <div class="item-container d-flex">
@@ -136,7 +148,7 @@
         </div>
 
 
-        <!-- Practice Of Bootstrap HEHEHE MIXING TWO WAYS-->
+        <!-- Practice Of Bootstrap HEHEHE MIXING TWO WAYS -->
         <div id="footer" class="container-fluid">
             <div class="subscription">
                 <div class="left">
@@ -260,7 +272,7 @@
                 <p>Empty!</p>
             </div>
             <div class="cart-items container-fluid p-0">
-                <!-- <div class="cart-item">
+               <!-- <div class="cart-item">
                     <div class="image">
                         <img src="./images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
                     </div>
@@ -282,100 +294,7 @@
                             <div class="price">$30</div>
                         </div>
                     </div>
-                </div>
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="./images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">
-                                $30</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="./images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">$30</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="./images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">$30</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="./images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">$30</div>
-                        </div>
-                    </div>
-                </div> -->
+               </div> --> 
             </div>
         </div>
         <div class="checkout">
