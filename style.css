@@ -19,14 +19,21 @@ body {
 
 #header {
     height: 110vh;
-    background:/* linear-gradient(to right,rgba(255,255,255,.01),transparent,rgba(255,255,255,0.01)), */ url("images/head-items2(1)-bg.webp");
     background-position: center;
     background-size: cover;
     color: black;
     padding:0;
-    padding: 20px 50px;
     position: relative;
     z-index: 2;
+}
+
+#header .bg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #nav {
@@ -37,6 +44,7 @@ body {
     z-index: 1;
     background-color: transparent;
     transition: .5s;
+    width: 100%;
 }
 
 .white {
@@ -44,10 +52,7 @@ body {
     box-shadow: 0 0px 10px 0 gray !important;
 }
 
-#nav > div > div {
-    display: flex;
-    align-items: center !important;
-}
+
 
 #nav a {
     color:black;
@@ -63,10 +68,16 @@ body {
     text-decoration: underline;
 }
 
+#nav .nav-logo {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
 #nav .nav-logo h1{
     text-align: center;
-    font-size: 3rem;
-}
+    font-size: 2rem;
+    }
 
 #nav .nav-icons a {
     font-size: 25px;
@@ -102,13 +113,7 @@ body {
 }
 
 #nav .nav-logo-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 3rem;
-    top: 0;
-    z-index: -1;
+    
 }
 
 #header .content {
@@ -117,7 +122,6 @@ body {
 }
 
 #header .content .text {
-    width: 60%;
     color: white;
 }
 
@@ -152,31 +156,34 @@ body {
 }
 
 #products .card {
-    width: 247px;
     border: none !important;
 }
 
-#products .item-container .card img {
+#products .card img {
     border-radius: 20px;
     cursor: pointer;
     width: 100%;
 }
 
-#products .item-container .card .image-container:hover img {
-    display: none;
+#products .image-container {
+    position: relative;
 }
 
-#products .item-container .card video{
-    cursor: pointer;
-    display: none;
+#products .card video{
+    position: absolute;
+    height: 100%;
     width: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    display: none;
+    border-radius: 20px;
 }
 
-#products .item-container .card .image-container:hover video{
+#products .card .image-container:hover video{
     display: block;
 }
 
-#products .item-container .card .card-body a {
+#products .card-body a {
     border-radius: 20px;
     padding: 10px 20px;
     background-color: white;
@@ -186,7 +193,7 @@ body {
     color: black;
 }
 
-#products .item-container .card .card-body a:hover {
+#products a:hover {
     background-color: black;
     color: white;
 }
@@ -620,8 +627,7 @@ body {
 }
 
 @media (min-width: 1200px){
-   .nav-logo-container {
-        width: 100%;
-        left: 0 !important; 
+   .nav-logo h1{
+        font-size: 3rem !important;
    }
-}
+ }

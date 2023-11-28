@@ -9,17 +9,6 @@ window.addEventListener("scroll",function() {
     } else nav.classList.remove("white");
 }); 
 
-let cards = document.querySelectorAll("#products .card .image-container");
-
-for (let i = 0;i < cards.length;i++) {
-    cards[i].onmouseover = function() {
-        this.querySelector('video').play();
-    }
-    
-    cards[i].onmouseout = function() {
-        this.querySelector('video').pause();
-    }
-}
 
 
 
@@ -131,7 +120,7 @@ const CART = new function() {
 
     this.addItem = function(item) {
         let index = this.getItemIndex(item);
-        console.log(index) 
+        
         if (index == -1) {
             this.cart_data.push(this.items[item]);
             this.total_price += this.items[item].current_price;
@@ -200,7 +189,10 @@ const CART = new function() {
 window.onload = function() {
     fetch("../data.json")
     .then(response => response.json())
-    .then(data => CART.items = data);
+    .then(data => {
+        CART.items = data;
+        if (displayItems) displayItems();
+     });
 
     let cart_data = localStorage.getItem("cart-items");
     let previous_total = localStorage.getItem("previous-total");

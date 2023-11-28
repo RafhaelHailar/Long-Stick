@@ -19,28 +19,31 @@
             
         <!-- Header -->
         <div id="header" class="container-fluid">
-            <div id="nav" class="container-fluid ">
+            <div class="bg">
+                <img src="./images/head-items2(1)-bg.webp" class="w-100 h-100 img-fluid d-xl-inline-block d-none" />
+                <img src="./images/head-bg-small(1).webp" class="w-100 h-100 img-fluid d-xl-none d-inline-block" />
+            </div>
+            <div id="nav" class="container-fluid py-3 px-sm-5 px-none">
                 
-                <div class="position-relative d-flex justify-content-between py-3 ">
-                    <div class="px-md-5 nav-items d-xl-flex d-none align-items-center">
+                <div class="row align-items-center justify-content-around">
+                    <div class="nav-items col-4 d-none d-xl-block">
                         <a href="./subpages/shop.html">Shop</a>
                         <a href="#">About</a>
                         <a href="#">Contact Us</a>
                     </div>
-                    
-                    <div class="nav-burger d-xl-none d-flex">
-                       <button> 
-                           <i class="fa-solid fa-bars"></i>
-                       </button>
-                    </div>
+                    <div class="col-xl-4 col-10 d-flex justify-content-xl-center">
+                        <div class="nav-burger d-xl-none d-flex">
+                               <button> 
+                               <i class="fa-solid fa-bars"></i>
+                           </button>
+                        </div>
 
-                    <div style="height: 100%"  class=" nav-logo-container">
                         <div class="nav-logo">   
                             <h1 class=" m-0">Long Stick</h1>
                         </div>
                     </div>
-                    <div class="nav-icons px-lg-5">
-                        <a href="#" class="block mx-2 mx-lg-5">
+                    <div class="col-xl-4 col-2 nav-icons d-flex  justify-content-end align-items-center">
+                        <a class="btn" href="#" class="">
                             <i class="fa-solid fa-user"></i>
                         </a>
                         <a class="btn" onclick="CART.showHiddenCart()">
@@ -49,12 +52,14 @@
                     </div>
                 </div>
             </div>
-            <div class="content">
-                <div class="text">
-                    <h1>Anything <i>but</i> nothing</h1>
-                    <h4>Effective, eco-friendly daily essentials
-                        made with natural and clean ingredients.</h4>
-                    <a href="./subpages/shop.html">Shop all </a>
+            <div class="content px-lg-5">
+                <div class="row justify-content-xl-start justify-content-center">
+                    <div class="text col-10 col-xl-6 ">
+                        <h1>Anything <i>but</i> nothing</h1>
+                        <h4>Effective, eco-friendly daily essentials
+                            made with natural and clean ingredients.</h4>
+                        <a href="./subpages/shop.html">Shop all </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,78 +67,8 @@
         <!-- Products --> 
         <div id="products" class="container-fluid mt-5">
             <div class="container">
-                <div class="item-container d-flex">
-                    <div class="card">
-                        <div class="image-container">
-                            <video height="328.53px" style="border-radius: 20px;object-fit: fill;" loop>
-                                <source src="./images/videoplayback.mp4">
-                            </video>
-                            <img src="./images/stick-item-1.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3>Stick A04</h3>
-                            <h6>For 30$ Only</h6>
-                            <br>
-                            <a href="./subpages/shop.html" class="w-100" class="btn">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-container">
-                            <video height="328.53px" style="border-radius: 20px;object-fit: fill;" loop>
-                                <source src="./images/videoplayback.mp4">
-                            </video>
-                            <img src="./images/stick-item-3.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3>Stick B02</h3>
-                            <h5>For 42$ Only</h5>
-                            <br>
-                            <a href="./subpages/shop.html" class="w-100" class="btn">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-container">
-                            <video height="328.53px" style="border-radius: 20px;object-fit: fill;" loop>
-                                <source src="./images/videoplayback.mp4">
-                            </video>
-                            <img src="./images/stick-item-4.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3>Stick C01</h3>
-                            <h5>For 43$ Only</h5>
-                            <br>
-                            <a href="./subpages/shop.html" class="w-100" class="btn">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-container">
-                            <video height="328.53px" style="border-radius: 20px;object-fit: fill;" loop>
-                                <source src="./images/videoplayback.mp4">
-                            </video>
-                            <img src="./images/stick-item-5.jpg" alt="">
-                       </div>
-                        <div class="card-body text-center">
-                            <h3>Stick D12</h3>
-                            <h5>For 32$ Only</h5>
-                            <br>
-                            <a href="./subpages/shop.html" class="w-100" class="btn">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-container">
-                            <video height="328.53px" style="border-radius: 20px;object-fit: fill;" loop>
-                                <source src="./images/videoplayback.mp4">
-                            </video>
-                            <img src="./images/stick-item-6.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3>Stick E01</h3>
-                            <h5>For 44$ Only</h5>
-                            <br>
-                            <a href="./subpages/shop.html" class="w-100" class="btn">Shop Now</a>   
-                        </div>
-                    </div>
-                    
+                <div class="item-container row">
+                                   
                 </div>
             </div>
         </div>
@@ -148,7 +83,7 @@
         </div>
 
 
-        <!-- Practice Of Bootstrap HEHEHE MIXING TWO WAYS -->
+        <!-- Practice Of Bootstrap HEHEHE MIXING TWO WAYS --> 
         <div id="footer" class="container-fluid">
             <div class="subscription">
                 <div class="left">
@@ -258,7 +193,7 @@
         </div>
 
     </div>
-
+   
     <div id="cart">
         <div class="head">
             <h3>Your Cart</h3>
@@ -301,7 +236,54 @@
             <button>$150 - Checkout</button>
         </div>
     </div>
-
+    
     <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" >
+       function displayItems() {
+          const itemsToDisplay = [0,3,5,7,9];
+          const container = document.querySelector("#products .item-container");
+          let itemHTMLs = ``;
+          for (let i = 0;i < itemsToDisplay.length;i++) {
+              const itemIndex = itemsToDisplay[i];
+              const itemKey = Object.keys(CART.items)[itemIndex];
+              const {image,name,current_price} = CART.items[itemKey];
+              const breakpoints = ["sm","md","lg","xl"];
+              const itemDisplay = `
+                  <div class="col ${i > 0 && `d-${breakpoints[i]}-block d-none`}">
+                      <div class="card">
+                               <div class="image-container">
+                                    <video loop >
+                                        <source src="./images/videoplayback.mp4">
+                                    </video>
+                                    <img src="${image}" alt="">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h3>${name}</h3>
+                                    <h6>For $${current_price} Only</h6>
+                                    <br>
+                                    <a href="./subpages/shop.html" class="w-100" class="btn">Shop Now</a>
+                                </div>
+                       </div>
+                   </div>
+               `; 
+               itemHTMLs += itemDisplay;
+           }
+          container.innerHTML = itemHTMLs;   
+
+          let cards = document.querySelectorAll("#products .card .image-container");
+
+            for (let i = 0;i < cards.length;i++) {
+                cards[i].onmouseover = function() {
+                    this.querySelector('video').play();
+                }
+                
+                cards[i].onmouseout = function() {
+                    this.querySelector('video').pause();
+                }
+            }
+       }
+
+      
+    </script>
 </body>
 </html>
