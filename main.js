@@ -187,7 +187,7 @@ const CART = new function() {
 
 
 window.onload = function() {
-    fetch("../data.json")
+    fetch("https://raw.githubusercontent.com/RafhaelHailar/Long-Stick/master/data.json")
     .then(response => response.json())
     .then(data => {
         CART.items = data;
