@@ -231,41 +231,17 @@ body {
 #footer {
     margin-top: 5rem;
     background-color: #beffba;
-    padding: 3.5rem;
+    padding: 3.5rem 0;
 }
 
 #footer hr {
     border-top: 0.1rem solid black;
 }
 
-#footer .subscription {
-    padding: 1rem 3rem;
-    display: inline-block;
-    width: 100%;
-}
-
-#footer .subscription .left {
-   float: left;
-}
-
-#footer .left .text {
-    width: 24rem;
-}
-
-#footer .subscription .right {
-    float: right;
-    width: 50%;
-}
-
-#footer .email {
-    text-align: right;
-    position: relative;
-}
-
 #footer .email input{
-    width:75%;
     padding:.3rem 1rem;
     border: 1px solid #d0e6ce;
+    flex: 1;
 }
 
 #footer .email button {
@@ -277,7 +253,6 @@ body {
 
 #footer .links {
     font-size: 1.5rem ;
-    text-align: right;
     margin-top: 1.1rem;
 }
 
@@ -319,27 +294,23 @@ body {
     text-decoration: underline;
 }
 
-#footer .copyright {
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-#footer .copyright .left{
-    font-size: .9rem;
-}
-
-#footer .copyright .right ul{
+#footer .copyright ul{
     display: flex;
     list-style: none;
 }
 
-#footer .copyright .right ul li {
+#footer .copyright ul li {
     margin-left: 1.6rem;
 }
 
-#footer .copyright .right ul a {
+#footer .copyright ul  a {
     font-size: .9rem;
+    text-decoration: none;
+    color: black;
+}
+
+#footer .copyright a:hover {
+    text-decoration: underline;
 }
 
 #cart {
