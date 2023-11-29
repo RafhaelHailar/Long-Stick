@@ -191,7 +191,8 @@ window.onload = function() {
     .then(response => response.json())
     .then(data => {
         CART.items = data;
-        if (displayItems) displayItems();
+
+        if (window.displayItems) displayItems();
      });
 
     let cart_data = localStorage.getItem("cart-items");

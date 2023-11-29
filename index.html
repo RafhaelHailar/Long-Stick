@@ -23,9 +23,9 @@
                 <img src="./images/head-items2(1)-bg.webp" class="w-100 h-100 img-fluid d-xl-inline-block d-none" />
                 <img src="./images/head-bg-small(1).webp" class="w-100 h-100 img-fluid d-xl-none d-inline-block" />
             </div>
-            <div id="nav" class="container-fluid py-3 px-sm-5 px-none">
+            <div id="nav" class="container-fluid py-3  px-0">
                 
-                <div class="row align-items-center justify-content-around">
+                <div class="row align-items-center justify-content-around px-sm-5 px-0">
                     <div class="nav-items col-4 d-none d-xl-block">
                         <a href="./subpages/shop.html">Shop</a>
                         <a href="#">About</a>
@@ -52,13 +52,13 @@
                     </div>
                 </div>
             </div>
-            <div class="content px-lg-5">
+            <div class="content px-lg-5 container-fluid">
                 <div class="row justify-content-xl-start justify-content-center">
                     <div class="text col-10 col-xl-6 ">
                         <h1>Anything <i>but</i> nothing</h1>
                         <h4>Effective, eco-friendly daily essentials
                             made with natural and clean ingredients.</h4>
-                        <a href="./subpages/shop.html">Shop all </a>
+                        <a href="./subpages/shop.html" class="stick-btn-border">Shop all </a>
                     </div>
                 </div>
             </div>
@@ -73,53 +73,59 @@
             </div>
         </div>
 
-
-        <div id="about" class="container">
-            <div class="content">
-                <h1>Big Fat Long Stick</h1>
-                <h3>We make daily sticks better for your mental health and better for our planet — because small slap can make a big impact.</h3>
-                <button>About Us</button>
+        
+        <div class="container-fluid p-0">
+            <div id="about" class="container-fluid">
+                <div class="content h-100 row justify-content-center align-items-center">
+                    <div class="col-lg-6">
+                        <h1>Big Fat Long Stick</h1>
+                        <h3>We make daily sticks better for your mental health and better for our planet — because small slap can make a big impact.</h3>
+                        <button class="stick-btn">About Us</button>
+                    </div>
+                </div>
             </div>
         </div>
 
 
         <!-- Practice Of Bootstrap HEHEHE MIXING TWO WAYS --> 
         <div id="footer" class="container-fluid">
-            <div class="row px-5">
-                <div class="col-lg-5 col-md-6 col-xl-4">
-                    <div>
-                        <h3><b>Give your inbox a</b> <i>refresh</i><b>.</b></h3>
-                        <p>10% off your first order when you sign up for our plastic-free and spam-free emails.</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-5 offset-xl-4 offset-lg-2 col-12 col-md-6">
-                    <div class="email gx-1">
-                        <div class="d-flex gap-1">
-                            <button class="d-md-none d-inline">Subscribe</button>
-                            <input type="email" placeholder="Enter email address">
-                            <button class="d-md-inline d-none">Subscribe</button>
+            <div class="container-fluid px-sm-5 px-3 ">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-xl-4">
+                        <div>
+                            <h3><b>Give your inbox a</b> <i>refresh</i><b>.</b></h3>
+                            <p>10% off your first order when you sign up for our plastic-free and spam-free emails.</p>
                         </div>
-                        <div class="links justify-content-md-end my-0 d-flex px-0">
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-tiktok"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-meta"></i>
-                            </a>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 offset-xl-4 offset-lg-2 col-12 col-md-6">
+                        <div class="email gx-1">
+                            <div class="d-flex gap-1">
+                                <button class="d-md-none d-inline">Subscribe</button>
+                                <input type="email" placeholder="Enter email address">
+                                <button class="d-md-inline d-none">Subscribe</button>
+                            </div>
+                            <div class="links justify-content-md-end my-0 d-flex px-0">
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-meta"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <hr>    
-            <div class="container-fluid certificates">
+            <div class="container-fluid certificates px-sm-5 px-3">
                 <div class="row">
-                    <div class="col-lg-6 col-12 left">
+                    <div class="col-lg-6 col-12">
                         <div class="row">
                             <div class="col-lg-3 col-4">
                                 <h5>Shop</h5>
@@ -172,26 +178,30 @@
                 </div>
             </div>
             <hr>
-            <div class="copyright w-100 px-5">
-                <div class="row ">
-                    <div class="col-lg-6 order-lg-1 order-2 d-flex justify-content-lg-start justify-content-center">
-                        &copy; 2023 Long Stick.All Rights Reversed.
-                    </div>
-                    <div class="col-lg-6 order-lg-2 order-1 d-flex justify-content-center align-items-center ">
-                        <ul>
-                            <li>
-                                <a href="#">hello@who?ask?dotcomputer</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy policy</a>
-                            </li>
-                            <li>
-                                <a href="#">Terms of service</a>
-                            </li>
-                            <li>
-                                <a href="#">Shipping</a>
-                            </li>
-                        </ul>
+            <div class="copyright container-fluid px-sm-5 px-0">
+                <div class="container-fluid">
+                    <div class="row ">
+                        <div class="col-lg-6 order-lg-1 order-2 d-flex justify-content-lg-start justify-content-center">
+                            &copy; 2023 Long Stick.All Rights Reversed.
+                        </div>
+                        <div class="col-lg-6 order-lg-2 order-1 d-flex justify-content-center align-items-center ">
+                            <div class="container-fluid">
+                                <ul class="px-0 row">
+                                    <li class="col">
+                                        <a href="#">hello@who?ask?dotcomputer</a>
+                                    </li>
+                                    <li class="col">
+                                        <a href="#">Privacy policy</a>
+                                    </li>
+                                    <li class="col">
+                                        <a href="#">Terms of service</a>
+                                    </li>
+                                    <li class="col">
+                                        <a href="#">Shipping</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
              </div>
@@ -266,7 +276,7 @@
                                     <h3>${name}</h3>
                                     <h6>For $${current_price} Only</h6>
                                     <br>
-                                    <a href="./subpages/shop.html" class="w-100" class="btn">Shop Now</a>
+                                    <a href="./subpages/shop.html" class="stick-btn-inverse" class="btn">Shop Now</a>
                                 </div>
                        </div>
                    </div>

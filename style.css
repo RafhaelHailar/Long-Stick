@@ -2,6 +2,49 @@ body {
     font-family: 'Joti One', cursive;
 }
 
+.stick-btn,
+.stick-btn-border,
+.stick-btn-inverse {
+    --bg: black;
+    --color: white;
+    --p: 10px 40px;
+    --b: 2px solid black;
+}
+
+.stick-btn-inverse {
+    --bg: white;
+    --color: black;
+    --w: 100% !important;
+    --b: 3px solid black;
+    --p: 10px 20px;
+}
+
+.stick-btn-border {
+    --p: 10px 30px;
+    --m: .1rem;
+}
+
+.stick-btn ,
+.stick-btn-border,
+.stick-btn-inverse {
+    background-color: var(--bg);
+    color: var(--color);
+    text-decoration: none;
+    padding: var(--p);
+    border-radius: 20px;
+    display:inline-block;
+    width: var(--w);
+    border: var(--b);
+    margin: var(--m);
+}
+
+.stick-btn:hover,
+.stick-btn-inverse:hover,
+.stick-btn-border:hover {
+    background-color: var(--color);
+    color: var(--bg);
+}
+
 #main {
     position: relative;
 }
@@ -125,22 +168,6 @@ body {
     color: white;
 }
 
-#header .content .text a{
-    background-color: black;
-    color: white;
-    border-radius:20px !important;
-    border: 1px solid black;    
-    padding: 10px 30px;
-    text-decoration: none;
-    margin-top: 1rem;
-    display: inline-block;
-}
-
-#header .content .text a:hover {
-    background-color: white;
-    color: black;
-}   
-
 #header .content .images {
     position: absolute;
     top: 0 ;
@@ -183,21 +210,6 @@ body {
     display: block;
 }
 
-#products .card-body a {
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: white;
-    border: 3px solid black;
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-}
-
-#products a:hover {
-    background-color: black;
-    color: white;
-}
-
 #about {
     background:/* linear-gradient(to right,rgba(255,255,255,.01),transparent,rgba(255,255,255,0.01)), */ url("images/header-bg.jpg");
     background-position: center;
@@ -205,28 +217,9 @@ body {
     height: 100vh;
     margin-top: 10rem;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#about .content {
-    width: 50%;
-    justify-content: center;
-}
-
-#about .content button {
-    background-color: black;
-    color: white;
-    padding: 10px 40px;
-    border-radius: 20px;
 }
 
 
-#about .content button:hover {
-    background-color:white;
-    color: black;
-}
 
 #footer {
     margin-top: 5rem;
@@ -257,59 +250,44 @@ body {
 }
 
 #footer .links a {
-    color: black;
-    text-decoration: none;
     margin: .5rem;
 }
 
-#footer .certificates {
-    padding: 1rem 3rem;
-}
-
-#footer .certificates .left h5{
+#footer .certificates h5{
     font-size: 1rem;
     margin-bottom: 1.5rem;
 }
 
 #footer .certificates ul{
-    list-style: none;
     padding: 0;
 }
 
-#footer .certificates ul li {
+#footer .certificates li {
     margin-bottom: .4rem;
 }
 
-#footer .certificates ul a , 
-#footer .copyright .right ul a {
-    text-decoration: none;
-    color: black;
-}
-
-#footer .certificates ul a {
+#footer .certificates a {
     font-size: .8rem;
-}
-
-#footer .certificates ul a:hover , #footer .copyright .right ul a:hover {
-    text-decoration: underline;
 }
 
 #footer .copyright ul{
     display: flex;
+}
+
+#footer .copyright  a {
+    font-size: .9rem;
+}
+
+#footer ul {
     list-style: none;
 }
 
-#footer .copyright ul li {
-    margin-left: 1.6rem;
-}
-
-#footer .copyright ul  a {
-    font-size: .9rem;
+#footer a { 
     text-decoration: none;
     color: black;
 }
 
-#footer .copyright a:hover {
+#footer a:hover {
     text-decoration: underline;
 }
 
