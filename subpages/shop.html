@@ -38,7 +38,7 @@
         <div id="header" class="container-fluid">
             <div id="nav" class="container-fluid py-3  px-0">
                 
-                <div class="row align-items-center justify-content-around">
+                <div class="row align-items-center justify-content-around px-sm-5 px-0">
                     <div class="nav-items col-4 d-none d-xl-block">
                         <a href="./subpages/shop.html">Shop</a>
                         <a href="#">About</a>
@@ -731,5 +731,67 @@
     </div>
 
     <script type="text/javascript" src="../main.js"></script>
+    <script type="text/javascript">
+        function init() {
+            // containers of every category starting from A Stick which is at position 0;
+            const containers = document.querySelectorAll("#item-collections .items");  
+            const CategoryName = ["A Stick","A Non Stick","A Non Stick Pan?","Stick - O"];
+            
+            // holder for every innerHTML of the containers that will be place later.
+            // same indexing as containers
+            const itemHTMLs = new Array(containers.length).fill("");
+
+            for (let itemName in CART.items) {
+                let {name,image,subname,
+                     current_price,previous_price,
+                     review,category} = CART.items[itemName];
+
+                let itemHTML = `
+                    <div class="card">
+                            <div class="card-img-top">
+                                <img src=".${image}" class="img-fluid" />
+                                <div class="actions">
+                                    <button>Learn More</button>
+                                    <button onclick="CART.addItem('${itemName}')">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="name">
+                                    <div class="left">
+                                        <a href="">${name}</a>                                      
+                                        <p style="font-size: 0.9rem;"><i>${subname}</i></p>
+                                    </div>
+                                    <div class="right">
+                                        <p style="font-size: 1.2rem;">$${current_price}</p>
+                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$${previous_price}</p>
+                                    </div>         
+                                </div>
+                                <div class="reviews">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>&nbsp;${review} Reviews</span>
+                                </div>
+                            </div>
+                     </div>
+                `;
+                
+                for (let i = 0;i < category.length;i++) {
+                    const index = category[i];
+                    itemHTMLs[index] = itemHTMLs[index] + itemHTML;
+                }
+            }
+            
+            console.log(itemHTMLs);
+            //placing the innerHTML in the right container
+            for (let i = 0;i < containers.length;i++) {
+                const container = containers[i];
+                container.innerHTML = itemHTMLs[i];
+            }
+        }
+   </script>
+
 </body>
 </html>

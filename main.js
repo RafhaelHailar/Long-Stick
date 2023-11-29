@@ -192,7 +192,7 @@ window.onload = function() {
     .then(data => {
         CART.items = data;
 
-        if (window.displayItems) displayItems();
+        if (window.init) init();
      });
 
     let cart_data = localStorage.getItem("cart-items");
