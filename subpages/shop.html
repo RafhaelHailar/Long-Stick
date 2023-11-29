@@ -604,126 +604,7 @@
                 <h5>Your Cart is like your Brain</h5>
                 <p>Empty!</p>
             </div>
-            <div class="cart-items container-fluid p-0">
-                <!-- <div class="cart-item">
-                    <div class="image">
-                        <img src="../images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">
-                                <p class="current">$30</p>
-                                <p class="previous">$100</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="../images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">$30</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="../images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">$30</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="../images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">$30</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="image">
-                        <img src="../images/stick-item-1.jpg" alt="" class="h-100" style="width: 130px;">
-                    </div>
-                    <div class="text d-flex flex-column justify-content-start w-100">
-                        <a class="name" href="#" style="text-decoration: none;color: black;">
-                            Stick A04
-                        </a>
-                        <h5 class="text-secondary">Drum Stick</h5>
-                        <p>Real Stick</p>
-                        <button class="remove">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        <div class="actions">
-                            <div class="amount">
-                                <button><i class="fa-solid fa-plus"></i></button>
-                                <div class="number">3</div>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <div class="price">$30</div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
+            <div class="cart-items container-fluid p-0"></div>
         </div>
         <div class="checkout">
             <button>$150 - Checkout</button>
@@ -762,8 +643,8 @@
                                         <p style="font-size: 0.9rem;"><i>${subname}</i></p>
                                     </div>
                                     <div class="right">
-                                        <p style="font-size: 1.2rem;">$${current_price}</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$${previous_price}</p>
+                                        <p style="font-size: 1.2rem;">$${current_price ? current_price : "Free"}</p>
+                                        ${previous_price ? `<p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$${previous_price}</p>` : ""}
                                     </div>         
                                 </div>
                                 <div class="reviews">
@@ -772,7 +653,7 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;${review} Reviews</span>
+                                    <span>&nbsp;${numberFormatter(review)} Reviews</span>
                                 </div>
                             </div>
                      </div>
@@ -791,6 +672,7 @@
                 container.innerHTML = itemHTMLs[i];
             }
         }
+        
    </script>
 
 </body>

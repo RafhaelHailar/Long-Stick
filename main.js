@@ -209,3 +209,16 @@ window.onload = function() {
         CART.displayItems();
     }
 }
+
+
+// UTILITIES
+// format
+// digit = (d | dd | ddd)
+// == digit,...,digit
+/* 
+ * @params {number} number
+ * @return {string}
+*/
+function numberFormatter(number) {
+  return String(number).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g,","); 
+}
