@@ -417,20 +417,8 @@ body {
 
 /* SHOP PAGE */
 #item-collections {
-    display: flex;
-    justify-content: center;
     padding-top: 2em;
     gap: 1.5rem;
-}
-
-#item-collections .navigator {
-    width: 20vw;
-}
-
-#item-collections .navigator ul {
-    width: 100%;
-    padding: 0;
-    margin: none;
 }
 
 #item-collections .navigator li {
@@ -438,30 +426,12 @@ body {
     margin: 0.6rem 0;
 }
 
-#item-collections .navigator button {
-    background-color: white;
-    width: 100%;
-    padding: .5rem 0;
-    border-radius: 20px;
-    border: none;
-    box-shadow: inset 0 0 0 1.5px black;
-}
-
-#item-collections .navigator button:hover {
-    background-color: black;
-    color: white;
-}
-
 #item-collections .navigator button.active {
     background-color: black;
     color: white;
 }
 
-#item-collections .contents {
-    width: 60vw;
-}
-
-#item-collections .contents .content-item .title {
+#item-collections .title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -469,36 +439,36 @@ body {
     font-style: italic;
 }
 
-#item-collections .contents .content-item.hide {
+#item-collections .content-item.hide {
     display: none;
 }
 
-#item-collections .contents .content-item .title span {
+#item-collections .title span {
     flex:0.97;
     height: .2rem;
     background-color: #beffba;
 }
 
 
-#item-collections .contents .content-item .items {
+#item-collections .items {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-#item-collections .contents .card {
+#item-collections .card {
     width: 30%;
     border: none;
     margin-right:1.3rem;
     margin-bottom: 5rem;
 }
 
-#item-collections .contents .card .card-img-top {
+#item-collections .card-img-top {
     position: relative;
     cursor: pointer;
 }
 
-#item-collections .contents .card .card-img-top .actions{
+#item-collections .card-img-top .actions{
     position: absolute;
     left: 0;
     bottom: 2rem;
@@ -509,11 +479,7 @@ body {
     align-items: center;
 }
 
-#item-collections .actions {
-
-}
-
-#item-collections .contents .card .card-img-top .actions button {
+#item-collections .card-img-top .actions button {
     width: 90%;
     padding: .7rem 0;
     border: none;
@@ -525,48 +491,48 @@ body {
 }   
 
 
-#item-collections .contents .card .card-img-top .actions button:first-child {
+#item-collections .actions button:first-child {
     background-color: white;
 }
 
-#item-collections .contents .card .card-img-top .actions button:last-child {
+#item-collections .actions button:last-child {
     background-color: black;
     color: white;
     transition-delay: .15s;
     box-shadow: inset 0 0 0 2.5px black;
 }
 
-#item-collections .contents .card .card-img-top .actions button:last-child:hover {
+#item-collections .actions button:last-child:hover {
     background-color: white;
     color: black;
     transition: none;
 }
 
-#item-collections .contents .card .card-img-top:hover .actions button {
+#item-collections .card-img-top:hover .actions button {
     opacity: 1;
 }
 
-#item-collections .contents .card .card-body {
+#item-collections .card-body {
     padding: 0;
 }
 
-#item-collections .contents .card .name {
+#item-collections .card .name {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
 }
 
-#item-collections .contents .card .name a {
+#item-collections .card .name a {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
 }
 
-#item-collections .contents .card .name p {
+#item-collections .card .name p {
     margin: 0;
 }
 
-#item-collections .contents .card .reviews {
+#item-collections .card .reviews {
     margin-top: 1rem;
     font-size: 0.9rem;
 }

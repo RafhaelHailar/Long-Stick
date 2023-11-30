@@ -222,3 +222,27 @@ window.onload = function() {
 function numberFormatter(number) {
   return String(number).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g,","); 
 }
+
+//format 
+// string lowercase
+// == string-string-string...-string
+// input A Banna Under, output a-banana-under
+/*
+ * @params {string} string
+ * @return {string}
+*/
+function stringFormatter(string) {
+    return string.replace(/[^a-zA-Z]/g,"").replace(/\B(?=[A-Z])/g,"-").toLowerCase();
+}
+
+function test(func,input,expect) {
+    let message = "Failed!";
+    const result = func(input);
+    if (result === expect) message = "Success!";
+    console.log(`Testing ${func.name} with '${input}' , '${expect}'`);
+    console.log(`Function output: '${result}'`);
+    console.log(message);
+}
+
+test(stringFormatter,"May Onace","may-onace");
+test(stringFormatter,"May - Salado _ _asdas Balls - Onace","may-saladoasdas-balls-onace");

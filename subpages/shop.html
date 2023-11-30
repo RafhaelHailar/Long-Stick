@@ -40,7 +40,7 @@
                 
                 <div class="row align-items-center justify-content-around px-sm-5 px-0">
                     <div class="nav-items col-4 d-none d-xl-block">
-                        <a href="./subpages/shop.html">Shop</a>
+                        <a href="#">Shop</a>
                         <a href="#">About</a>
                         <a href="#">Contact Us</a>
                     </div>
@@ -52,7 +52,9 @@
                         </div>
 
                         <div class="nav-logo">   
-                            <h1 class=" m-0">Long Stick</h1>
+                            <a href="../index.html">
+                                <h1 class=" m-0">Long Stick</h1>
+                            </a>
                         </div>
                     </div>
                     <div class="col-xl-4 col-2 nav-icons d-flex  justify-content-end align-items-center">
@@ -72,520 +74,39 @@
 
         <!-- Items -->
         <div class="container-fluid" id="item-collections">
-            <div class="navigator">
-                <h3 style="margin-bottom:3rem;font-style: italic;">Collections</h3>
-
-                <ul>
-                    <li>
-                        <button class="active" onclick="SHOP.display('',this)">All Products</button>
-                    </li>
-                    <li>
-                        <button onclick="SHOP.display('a-stick',this)">A Stick</button>
-                    </li>
-                    <li>
-                        <button onclick="SHOP.display('a-non-stick',this)">A Non Stick</button>
-                    </li>
-                    <li>
-                        <button onclick="SHOP.display('a-non-stick-pan',this)">A Non Stick Pan ?</button>
-                    </li>
-                    <li>
-                        <button onclick="SHOP.display('stick-o',this)">Stick - O</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="contents">
-                <div class="content-item" id="a-stick">
-                    <div class="title">
-                        <h2>A Stick</h2>
-                        <span></span>
-                    </div>
-                    <div class="items">
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-1.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_A04')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick A04</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Drum Stick</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$30</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$100</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;965,679 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-1.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_A01')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick A01</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Stick E</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$40</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;565,679 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-3.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_A06')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick A06</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Stick Er</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$24</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$590</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;200,109 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-3.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_A007')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick A007</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>STICKret Agent</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$300</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;106,661 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-1.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_A09')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick A09</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>He is Stick</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">Free</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$9999</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;2 Good Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row justify-content-center gap-4">
+                <div class="navigator col-lg-3 col-12">
+                    <h3 style="font-style: italic;" class="mb-lg-5">Collections</h3>
+                    <ul class="p-0 d-lg-block d-flex justify-content-center gap-3"> </ul>
                 </div>
-                <div class="content-item" id="a-non-stick">
-                    <div class="title">
-                        <h2>A Non Stick</h2>
-                        <span></span>
+                <div class="contents col-lg-7 col-12">
+                    <div class="content-item" id="a-stick">
+                        <div class="title">
+                            <h2>A Stick</h2>
+                            <span></span>
+                        </div>
+                        <div class="items"></div>
                     </div>
-                    <div class="items">
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-4.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_C01')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick C01</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Sticky Friendly</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$43</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$432</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;801,322 Reviews</span>
-                                </div>
-                            </div>
+                    <div class="content-item" id="a-non-stick">
+                        <div class="title">
+                            <h2>A Non Stick</h2>
+                            <span></span>
                         </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-1.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_A04')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick A04</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Drum Stick</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$30</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$100</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;965679 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-4.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_C01?')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick C01?</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Human Bone Not A Stick</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$21</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$21.1</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;666,666 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-4.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_C01?')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick C01?</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Human Bone Not A Stick</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$21</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$21.1</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;666,666 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        
+                        <div class="items"></div>
                     </div>
-                </div>
-                <div class="content-item" id="a-non-stick-pan">
-                    <div class="title">
-                        <h2>A Non Stick Pan ?</h2>
-                        <span></span>
+                    <div class="content-item" id="a-non-stick-pan">
+                        <div class="title">
+                            <h2>A Non Stick Pan ?</h2>
+                            <span></span>
+                        </div>
+                        <div class="items"></div>
                     </div>
-                    <div class="items">
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-6.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_E01')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick E01</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Sticky Mouth</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$44</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$94</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;700,001 Reviews</span>
-                                </div>
-                            </div>
+                    <div class="content-item" id="stick-o">
+                        <div class="title">
+                            <h2>Stick - O</h2>
+                            <span></span>
                         </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-6.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Sticky_Foodle')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Sticky Foodle</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Stick Food</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$10</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$999</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;400,000 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-1.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_A04')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick A04</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Drum Stick</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$30</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$100</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;965679 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-item" id="stick-o">
-                    <div class="title">
-                        <h2>Stick - O</h2>
-                        <span></span>
-                    </div>
-                    <div class="items">
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-5.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_D12')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick D12</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Stick Beater</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$32</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>&nbsp;2,135,679 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-5.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_Brutality')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick Brutality</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Stick Cop</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$30</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$100</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span>&nbsp;1,235,679 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-5.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_Brutality')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick Brutality</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Stick Cop</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$30</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$100</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span>&nbsp;1,235,679 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top">
-                                <img src="../images/stick-item-5.jpg" class="img-fluid" />
-                                <div class="actions">
-                                    <button>Learn More</button>
-                                    <button onclick="CART.addItem('Stick_Brutality')">Add to Cart</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    <div class="left">
-                                        <a href="">Stick Brutality</a>                                      
-                                        <p style="font-size: 0.9rem;"><i>Stick Cop</i></p>
-                                    </div>
-                                    <div class="right">
-                                        <p style="font-size: 1.2rem;">$30</p>
-                                        <p style="text-decoration: line-through;color:gray;font-size: 0.8rem;text-align: right;">$100</p>
-                                    </div>         
-                                </div>
-                                <div class="reviews">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span>&nbsp;1,235,679 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="items"></div>
                     </div>
                 </div>
             </div>
@@ -671,9 +192,30 @@
                 const container = containers[i];
                 container.innerHTML = itemHTMLs[i];
             }
+
+            addNavigators(CategoryName);
         }
         
+        function addNavigators(navigatorNames) {
+            const container = document.querySelector(".navigator ul");
+            
+            //add the default 
+            navigatorNames.unshift("All Products");
+            
+            let navigatorHTMLs = ``;
+            for (let i = 0;i < navigatorNames.length;i++) {
+                const navigatorName = navigatorNames[i];
+                const isDefault = navigatorName === "All Products"; 
+                const navigatorHTML = `
+                    <li>
+                        <button class="stick-btn-inverse ${isDefault && "active"}" onclick="SHOP.display('${isDefault ? '' : stringFormatter(navigatorName)}',this)">${navigatorName}</button>
+                    </li>`;
+                navigatorHTMLs += navigatorHTML;
+            }
+            
+           container.innerHTML = navigatorHTMLs;
+        }
    </script>
-
+
 </body>
 </html>
