@@ -88,7 +88,7 @@ const CART = new function() {
     this.getItemIndex = function(id) {
         let result = -1;
         for (let i = 0;i < this.cart_data.length;i++) {
-            if () result = i;
+            if (this.cart_data[i].id === id) result = i;
         }
         return result;
     }
@@ -124,12 +124,13 @@ const CART = new function() {
         this.shown = false;
     }
 
-    this.addItem = function(item) {
-        let index = this.getItemIndex(item);
+    this.addItem = function(id) {
+        let index = this.getItemIndex(id);
         
         if (index == -1) {
-            this.cart_data.push(this.items[item]);
-            this.total_price += this.items[item].current_price;
+             
+            this.cart_data.push({id,quantity: 0});
+            this.total_price += this.items[index].current_price;
         }  
         else this.updateItemTotal(item,1);
         this.displayItems();

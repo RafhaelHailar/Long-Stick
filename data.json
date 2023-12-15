@@ -1,6 +1,6 @@
-{
-    "Stick_A04" : {
-        "id": 1,
+[
+    {
+        "id": 0,
         "name" : "Stick A04",
         "image" : "./images/stick-item-1.jpg",
         "subname" : "Drum Stick",
@@ -11,8 +11,8 @@
         "review": 965679,
         "category": [0,1,2]
     },
-    "Stick_A01" : {
-        "id": 2,
+    {
+        "id": 1,
         "name" : "Stick A01",
         "image" : "./images/stick-item-1.jpg",
         "subname" : "Stick E",
@@ -23,8 +23,8 @@
         "review": 565679,
         "category": [0]
     },
-    "Stick_A06" : {
-        "id": 3,
+    {
+        "id": 2,
         "name" : "Stick A06",
         "image" : "./images/stick-item-3.jpg",
         "subname" : "Stick Er",
@@ -35,8 +35,8 @@
         "review": 200109,
         "category": [0]
     },
-    "Stick_A007" : {
-        "id": 4,
+    {
+        "id": 3,
         "name" : "Stick A007",
         "image" : "./images/stick-item-3.jpg",
         "subname" : "STICKret Agent",
@@ -47,8 +47,8 @@
         "review": 106661,
         "category": [0]
     },
-    "Stick_A09" : {
-        "id": 5,
+    {
+        "id": 4,
         "name" : "Stick A09",
         "image" : "./images/stick-item-1.jpg",
         "subname" : "He is Stick",
@@ -59,8 +59,8 @@
         "review": 2,
         "category": [0]
     },
-    "Stick_C01" : {
-        "id": 6,
+    {
+        "id": 5,
         "name" : "Stick C01",
         "image" : "./images/stick-item-4.jpg",
         "subname" : "Sticky Friendly",
@@ -71,8 +71,8 @@
         "review": 801322,
         "category": [1]
     },
-    "Stick_C01?" : {
-        "id": 7,
+    {
+        "id": 6,
         "name" : "Stick C01?",
         "image" : "./images/stick-item-4.jpg",
         "subname" : "Human Bone Not A Stick",
@@ -83,8 +83,8 @@
         "review": 666666,
         "category": [1]
     },
-    "Stick_E01" : {
-        "id": 8,
+    {
+        "id": 7,
         "name" : "Stick E01",
         "image" : "./images/stick-item-6.jpg",
         "subname" : "Sticky Mouth",
@@ -95,8 +95,8 @@
         "review": 700001,
         "category": [2]
     },
-    "Sticky_Foodle" : {
-        "id": 9,
+    {
+        "id": 8,
         "name" : "Sticky Foodle",
         "image" : "./images/stick-item-6.jpg",
         "subname" : "Stick Food",
@@ -107,8 +107,8 @@
         "review": 400000,
         "category": [2]
     },
-    "Stick_D12" : {
-        "id": 10,
+    {
+        "id": 9,
         "name" : "Stick D12",
         "image" : "./images/stick-item-5.jpg",
         "subname" : "Stick Beater",
@@ -119,8 +119,8 @@
         "review": 2135679,
         "category": [3]
     },
-    "Stick_Brutality" : {
-        "id": 11,
+    {
+        "id": 10,
         "name" : "Stick Brutality",
         "image" : "./images/stick-item-5.jpg",
         "subname" : "Stick Cop",
@@ -131,4 +131,4 @@
         "review": 1235679,
         "category": [3]
     }
-}
+]

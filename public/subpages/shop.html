@@ -144,7 +144,7 @@
             const itemHTMLs = new Array(containers.length).fill("");
 
             for (let itemName in CART.items) {
-                let {name,image,subname,
+                let {id,name,image,subname,
                      current_price,previous_price,
                      review,category} = CART.items[itemName];
 
@@ -154,7 +154,7 @@
                                 <img src=".${image}" class="img-fluid" />
                                 <div class="actions">
                                     <button>Learn More</button>
-                                    <button onclick="CART.addItem('${itemName}')">Add to Cart</button>
+                                    <button onclick="CART.addItem('${id}')">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="card-body">
