@@ -1,5 +1,6 @@
 {
     "Stick_A04" : {
+        "id": 1,
         "name" : "Stick A04",
         "image" : "./images/stick-item-1.jpg",
         "subname" : "Drum Stick",
@@ -11,6 +12,7 @@
         "category": [0,1,2]
     },
     "Stick_A01" : {
+        "id": 2,
         "name" : "Stick A01",
         "image" : "./images/stick-item-1.jpg",
         "subname" : "Stick E",
@@ -22,6 +24,7 @@
         "category": [0]
     },
     "Stick_A06" : {
+        "id": 3,
         "name" : "Stick A06",
         "image" : "./images/stick-item-3.jpg",
         "subname" : "Stick Er",
@@ -33,6 +36,7 @@
         "category": [0]
     },
     "Stick_A007" : {
+        "id": 4,
         "name" : "Stick A007",
         "image" : "./images/stick-item-3.jpg",
         "subname" : "STICKret Agent",
@@ -44,6 +48,7 @@
         "category": [0]
     },
     "Stick_A09" : {
+        "id": 5,
         "name" : "Stick A09",
         "image" : "./images/stick-item-1.jpg",
         "subname" : "He is Stick",
@@ -55,6 +60,7 @@
         "category": [0]
     },
     "Stick_C01" : {
+        "id": 6,
         "name" : "Stick C01",
         "image" : "./images/stick-item-4.jpg",
         "subname" : "Sticky Friendly",
@@ -66,6 +72,7 @@
         "category": [1]
     },
     "Stick_C01?" : {
+        "id": 7,
         "name" : "Stick C01?",
         "image" : "./images/stick-item-4.jpg",
         "subname" : "Human Bone Not A Stick",
@@ -77,6 +84,7 @@
         "category": [1]
     },
     "Stick_E01" : {
+        "id": 8,
         "name" : "Stick E01",
         "image" : "./images/stick-item-6.jpg",
         "subname" : "Sticky Mouth",
@@ -88,6 +96,7 @@
         "category": [2]
     },
     "Sticky_Foodle" : {
+        "id": 9,
         "name" : "Sticky Foodle",
         "image" : "./images/stick-item-6.jpg",
         "subname" : "Stick Food",
@@ -99,6 +108,7 @@
         "category": [2]
     },
     "Stick_D12" : {
+        "id": 10,
         "name" : "Stick D12",
         "image" : "./images/stick-item-5.jpg",
         "subname" : "Stick Beater",
@@ -110,6 +120,7 @@
         "category": [3]
     },
     "Stick_Brutality" : {
+        "id": 11,
         "name" : "Stick Brutality",
         "image" : "./images/stick-item-5.jpg",
         "subname" : "Stick Cop",

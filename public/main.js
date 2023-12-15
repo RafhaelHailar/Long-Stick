@@ -9,7 +9,10 @@ window.addEventListener("scroll",function() {
     } else nav.classList.remove("white");
 }); 
 
-
+window.addEventListener("click",function(event) {
+    const shadow = document.querySelector(".cover"); 
+    if (event.target === shadow && CART.shown) CART.hideHiddenCart();
+});
 
 
 let SHOP = new (function() {
@@ -68,9 +71,11 @@ const CART = new function() {
     this.checkout_button = document.querySelector(".checkout button");
     this.total_price = 0;
     this.cart_data = [];
+    this.shown = false;
+    console.log(this.cart_data);
 
-    this.updateItemTotal = function(item_name,number) {
-        let index = this.getItemIndex(item_name);
+    this.updateItemTotal = function(id) {
+        let index = this.getItemIndex(id);
         let item = this.cart_data[index];
 
         item.total += number;
@@ -80,16 +85,15 @@ const CART = new function() {
         else this.displayItems();
     }   
 
-    this.getItemIndex = function(item_name) {
+    this.getItemIndex = function(id) {
         let result = -1;
-        item_name = item_name.replace("_"," ");
         for (let i = 0;i < this.cart_data.length;i++) {
-            if (this.cart_data[i].name == item_name) result = i;
+            if () result = i;
         }
         return result;
     }
 
-    this.removeItem = function(item_name,reduced) {
+    this.removeItem = function(id,reduced) {
         let index = this.getItemIndex(item_name);
         let item = this.cart_data[index];
 
@@ -106,16 +110,18 @@ const CART = new function() {
         this.element.style.transform = "translateX(0)";
         document.body.style.overflow = "hidden";
         document.getElementById("main").classList.add("cover");
+        this.shown = true;
     }
 
     this.hideHiddenCart = function hideHiddenCart() {
         nav.classList.remove("white");
         this.element.style.transform = "translateX(100%)";
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = "";
         document.getElementById("main").classList.remove("cover");
         setTimeout(() => {
               if (scrollY > 20) nav.classList.add("white");
         },100);
+        this.shown = false;
     }
 
     this.addItem = function(item) {
@@ -135,7 +141,7 @@ const CART = new function() {
         else cart_greeting.classList.add("hide");
 
         document.querySelector("#cart .checkout").innerHTML = this.cart_data.length === 0 ? `<a href="${pathname !== "shop.html" ? "./subpages/shop.html" : ""}">Go Shop</a>` 
-                : `<button>$${this.total_price} - Checkout</button>`;
+                : `<button onclick="checkoutItems()">$${this.total_price} - Checkout</button>`;
         
         localStorage.setItem("cart-items",JSON.stringify(this.cart_data));
         localStorage.setItem("previous-total",String(this.total_price));
@@ -162,9 +168,9 @@ const CART = new function() {
                     </button>
                     <div class="actions">
                         <div class="amount">
-                            <button onclick="CART.updateItemTotal('${name.replace(" ","_")}',1)"><i class="fa-solid fa-plus" ></i></button>
+                            <button onclick="CART.updateItemTotal('${i}',1)"><i class="fa-solid fa-plus" ></i></button>
                             <div class="number">${total}</div>
-                            <button onclick="CART.updateItemTotal('${name.replace(" ","_")}',-1)"><i class="fa-solid fa-minus" ></i></button>
+                            <button onclick="CART.updateItemTotal('${i}',-1)"><i class="fa-solid fa-minus" ></i></button>
                         </div>
                         <div class="price">
                             <p class="current">${current_price > 0 ? "$" + current_price : "Free"}</p>
@@ -185,6 +191,9 @@ const CART = new function() {
     }
 }
 
+async function checkoutItems() {
+    console.log("HEY");
+}
 
 window.onload = function() {
     fetch("https://raw.githubusercontent.com/RafhaelHailar/Long-Stick/master/data.json")
