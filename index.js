@@ -7,8 +7,10 @@ const PORT = 5000;
 
 app.use(express.static("public"));
 
+app.use(express.json());
 app.post("/checkout",(request,response) => {
     console.log(request.body);
+    response.send({status: 199});
 });
 
 server.listen(PORT,function(error) {

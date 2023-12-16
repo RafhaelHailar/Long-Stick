@@ -72,16 +72,16 @@ const CART = new function() {
     this.total_price = 0;
     this.cart_data = [];
     this.shown = false;
-    console.log(this.cart_data);
 
-    this.updateItemTotal = function(id) {
+    this.updateItemTotal = function(id,number) {
         let index = this.getItemIndex(id);
-        let item = this.cart_data[index];
-
-        item.total += number;
+        let item = this.items[id];
+        let product = this.cart_data[index];
+        
+        product.quantity += number;
         this.total_price += item.current_price * (number < 0 ? -1 : 1);
 
-        if (item.total == 0) this.removeItem(item_name,true);
+        if (product.quantity == 0) this.removeItem(id,true);
         else this.displayItems();
     }   
 
@@ -94,12 +94,14 @@ const CART = new function() {
     }
 
     this.removeItem = function(id,reduced) {
-        let index = this.getItemIndex(item_name);
-        let item = this.cart_data[index];
+        let index = this.getItemIndex(String(id));
+        let item = this.items[id];
+        let product = this.cart_data[index];
+        console.log(this.cart_data,id,index,product);
 
         this.cart_data.splice(index,1);
         if (!reduced)
-            this.total_price -= item.total * item.current_price;
+            this.total_price -= product.quantity * item.current_price;
         
         item.total = 1;
         this.displayItems();
@@ -128,11 +130,10 @@ const CART = new function() {
         let index = this.getItemIndex(id);
         
         if (index == -1) {
-             
-            this.cart_data.push({id,quantity: 0});
-            this.total_price += this.items[index].current_price;
+            this.cart_data.push({id,quantity: 1});
+            this.total_price += this.items[id].current_price;
         }  
-        else this.updateItemTotal(item,1);
+        else this.updateItemTotal(id,1);
         this.displayItems();
     }
 
@@ -149,7 +150,8 @@ const CART = new function() {
 
         let items = "";
         for (let i = 0;i < this.cart_data.length;i++) {
-            let {name,image,subname,type,previous_price,current_price,total} = this.cart_data[i];
+            let {id,quantity} = this.cart_data[i];
+            let {name,image,subname,type,previous_price,current_price} = this.items[id];
 
             if (/subpages\/shop.html/.test(location.pathname)) image = "../" + image;
         
@@ -165,13 +167,13 @@ const CART = new function() {
                     <h5 class="text-secondary">${subname}</h5>
                     <p>${type}</p>
                     <button class="remove">
-                        <i class="fa-solid fa-trash" onclick="CART.removeItem('${name.replace(" ","_")}')"></i>
+                        <i class="fa-solid fa-trash" onclick="CART.removeItem(${id})"></i>
                     </button>
                     <div class="actions">
                         <div class="amount">
-                            <button onclick="CART.updateItemTotal('${i}',1)"><i class="fa-solid fa-plus" ></i></button>
-                            <div class="number">${total}</div>
-                            <button onclick="CART.updateItemTotal('${i}',-1)"><i class="fa-solid fa-minus" ></i></button>
+                            <button onclick="CART.updateItemTotal('${id}',1)"><i class="fa-solid fa-plus" ></i></button>
+                            <div class="number">${quantity}</div>
+                            <button onclick="CART.updateItemTotal('${id}',-1)"><i class="fa-solid fa-minus" ></i></button>
                         </div>
                         <div class="price">
                             <p class="current">${current_price > 0 ? "$" + current_price : "Free"}</p>
@@ -193,17 +195,24 @@ const CART = new function() {
 }
 
 async function checkoutItems() {
-    console.log("HEY");
+    console.log(CART.cart_data);
+    const request = await fetch("/checkout", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(CART.cart_data)
+    });
+    const response = await request.json();
+    console.log(response);
 }
 
-window.onload = function() {
-    fetch("https://raw.githubusercontent.com/RafhaelHailar/Long-Stick/master/data.json")
-    .then(response => response.json())
-    .then(data => {
-        CART.items = data;
+async function getItemData() {
+    const request = await fetch("https://raw.githubusercontent.com/RafhaelHailar/Long-Stick/master/data.json")
+    const data = await request.json();
 
-        if (window.init) init();
-     });
+    CART.items = data;
+    if (window.init) init();
 
     let cart_data = localStorage.getItem("cart-items");
     let previous_total = localStorage.getItem("previous-total");
@@ -219,6 +228,8 @@ window.onload = function() {
         CART.displayItems();
     }
 }
+
+window.addEventListener("DOMContentLoaded",getItemData);
 
 
 // UTILITIES

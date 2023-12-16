@@ -143,10 +143,10 @@
             // same indexing as containers
             const itemHTMLs = new Array(containers.length).fill("");
 
-            for (let itemName in CART.items) {
+            for (let i = 0;i <  CART.items.length;i++) {
                 let {id,name,image,subname,
                      current_price,previous_price,
-                     review,category} = CART.items[itemName];
+                     review,category} = CART.items[i];
 
                 let itemHTML = `
                     <div class="card">
